@@ -1,0 +1,28 @@
+{
+  "name": "camiac",
+  "author": {
+    "email": "mail@dennisbappert.com",
+    "name": "Dennis Bappert"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "dependencies": {
+    "@tensorflow-models/body-pix": "^2.0.5",
+    "@tensorflow/tfjs-converter": "^1.7.2",
+    "@tensorflow/tfjs-core": "^1.7.2",
+    "electron-store": "^5.1.1",
+    "nanoevents": "^5.1.5",
+    "source-map-support": "^0.5.16"
+  },
+  "devDependencies": {
+    "electron": "8.2.0",
+    "electron-builder": "^22.4.1",
+    "electron-webpack": "^2.8.2",
+    "webpack": "~4.42.1"
+  }
+}
